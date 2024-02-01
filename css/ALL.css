@@ -1,0 +1,320 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.all {
+  width: 100%;
+  /*-----------------設定100%讓他跟父層(body)一樣寬------------------*/
+  height: 100vh;
+  background-color: #d6ccc2;
+}
+
+.nav {
+  height: 100%;
+  width: 366px;
+  background-color: #dddddd;
+  float: left;
+  padding: 80px;
+  /* position: relative; */
+}
+
+@media (max-width: 1200px) {
+  .nav {
+    height: 100px;
+    width: 100%;
+    /* float: none; */
+    padding: 10px;
+    /*----------這裡有 上10px下10px 所以下面高度要減掉120px -----------*/
+  }
+}
+
+@media (max-width: 450px) {
+  .nav {
+    position: relative;
+  }
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+  background-image: url(../img/作業4.jpg);
+  background-size: cover;
+  background-position: center;
+  margin: auto;
+  margin-bottom: 30px;
+  border-radius: 50%;
+}
+
+@media (max-width: 1200px) {
+  .logo {
+    height: 80px;
+    width: 80px;
+    /* display: none; */
+    float: left;
+  }
+}
+
+@media (max-width: 450px) {
+  .logo {
+    float: none;
+    position: absolute;
+    top: 5px;
+    left: calc((100% - 90px) / 2);
+  }
+}
+
+.nav-btn-all {
+  width: 150px;
+}
+
+@media (max-width: 1200px) {
+  .nav-btn-all {
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .nav-btn-all {
+    width: 120px;
+    margin: auto;
+    background-color: #5f7470;
+    opacity: 0.8;
+    position: absolute;
+    left: 10px;
+    display: none;
+  }
+}
+
+.nav-btn {
+  background-color: #b8bdb5;
+  color: whitesmoke;
+  height: 50px;
+  width: 100%;
+  font-size: 24px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px 0;
+  margin: 10px;
+  display: block;
+}
+
+@media (max-width: 1200px) {
+  .nav-btn {
+    width: 90px;
+    float: right;
+  }
+}
+
+@media (max-width: 450px) {
+  .nav-btn {
+    color: #01161e;
+    font-size: 20px;
+    font-style: oblique;
+    padding: 20px;
+    margin: auto;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+}
+
+.container {
+  height: 100%;
+  width: calc(100% - 366px);
+  float: left;
+  padding-top: calc((100vh - 570px) / 2);
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 100%;
+    height: calc(100% - 120px);
+    /*----------100%減nav的高 100px+20px(上下padding) 程式碼往上看 -----------*/
+    padding: 40px 20px;
+    float: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .container {
+    height: calc(100vh - 120px);
+    padding: 5px 15px;
+  }
+}
+
+.content {
+  width: 957px;
+  height: 570px;
+  margin: auto;
+}
+
+/* @media query 媒體查詢 */
+/* max-width 最大寬度 */
+@media (max-width: 1350px) {
+  .content {
+    width: 800px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .content {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .content {
+    margin: auto;
+  }
+}
+
+.img {
+  width: calc((100% - 10px * 2) / 3);
+  height: 100%;
+  float: left;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 1350px) {
+  .img {
+    height: calc(50% - 5px);
+    background-position: top;
+  }
+}
+
+@media (max-width: 450px) {
+  .img {
+    height: calc(50% - 5px);
+    float: left;
+    background-size: cover;
+    background-position: top;
+  }
+}
+
+
+.img:hover {
+  transform: scale(1.05);
+  border-radius: 10px;
+}
+
+.img-1 {
+  background-image: url(../img/作業1.png);
+}
+
+.img-2 {
+  background-image: url(../img/作業2.jpg);
+  margin: 0 10px;
+}
+
+.img-3 {
+  background-image: url(../img/作業3.jpg);
+}
+
+@media (max-width: 1350px) {
+  .img-1 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .img-2 {
+    width: calc(50% - 5px);
+    margin-left: 0;
+    margin-right: 10px;
+  }
+
+  .img-3 {
+    width: calc(50% - 5px);
+  }
+}
+
+@media(max-width:450px) {
+  .img-1 {
+    height: calc(100% / 3);
+    margin-bottom: 5px;
+    background-position: center;
+  }
+
+  .img-2 {
+    margin-bottom: 5px;
+    width: 100%;
+    height: calc(100% / 3);
+    background-position: center;
+  }
+
+  .img-3 {
+    width: 100%;
+    height: calc(100% / 3);
+    background-position: center;
+  }
+}
+
+@media (max-width:450px) {
+  .ham-menu {
+    width: 80px;
+    height: 80px;
+    background-color: #889696;
+    /* 原來是行內層級 改為區塊層級 */
+    display: block;
+    position: relative;
+  }
+
+  .ham-menu .line {
+    background-color: #eff6e0;
+    width: 80%;
+    height: 5px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s;
+  }
+
+  .ham-menu .line-1 {
+    top: 25%;
+  }
+
+  .ham-menu .line-2 {
+    top: 50%;
+  }
+
+  .ham-menu .line-3 {
+    top: 75%;
+  }
+
+  #ham-menu-switch:checked+.ham-menu .line-2 {
+    display: none;
+  }
+
+  #ham-menu-switch:checked+.ham-menu .line-1 {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  #ham-menu-switch:checked+.ham-menu .line-3 {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  #ham-menu-switch:checked~.nav-btn-all {
+    display: block;
+  }
+}
+
+@media (max-width: 1200px) {
+  .nav-btn-all {
+    width: 100%;
+  }
+
+  .nav-btn {
+    width: 90px;
+    float: right;
+  }
+}

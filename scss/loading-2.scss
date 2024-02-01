@@ -1,0 +1,162 @@
+@keyframes right {
+    // 0% {
+    //     top: 0;
+    //     left: -100%;
+    // }
+
+    50%,
+    100% {
+        left: 100%; //50%-100% => stop
+    }
+
+    75% {
+        left: 100%;
+    }
+}
+
+@keyframes bottom {
+
+    50%,
+    100% {
+        top: 100%;
+    }
+
+    75% {
+        top: 100%;
+    }
+}
+
+@keyframes left {
+
+    50%,
+    100% {
+        right: 100%;
+    }
+
+    75% {
+        right: 100%;
+    }
+}
+
+@keyframes top {
+
+    50%,
+    100% {
+        bottom: 100%;
+    }
+
+    75% {
+        bottom: 100%;
+    }
+}
+
+@keyframes loading {
+    100% {
+        width: 142px;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.all {
+    width: 100%;
+    height: 100vh;
+    background-color:#343a40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/外星人.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+
+    .box {
+        width: 300px;
+        height: 300px;
+        background-color:#cad2c5 ;
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+
+        &:hover {
+            box-shadow:0 0 600px 150px rgb(42, 240, 42);
+            border: 2px solid black;
+            .line-1 {
+                background: linear-gradient(to right, transparent, rgb(42, 240, 42));
+            }
+            .line-2 {
+                background: linear-gradient(to bottom, transparent, rgb(42, 240, 42));
+            }
+            .line-3 {
+                background: linear-gradient(to left, transparent, rgb(42, 240, 42));
+            }
+            .line-4 {
+                background: linear-gradient(to top, transparent, rgb(42, 240, 42));
+            }
+        }
+    
+    }
+
+    .line-1 {
+        background: linear-gradient(to right, transparent,#d62828);
+        width: 100%;
+        height: 10px;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        // animation: name duration timing-function delay iteration-count direction fill-mode;
+        animation: right 2s linear 0s infinite;
+    }
+
+    .line-2 {
+        background: linear-gradient(to bottom, transparent,#d62828);
+        width: 10px;
+        height: 100%;
+        position: absolute;
+        top: -100%;
+        right: 0;
+        animation: bottom 2s linear 0.5s infinite;
+    }
+
+    .line-3 {
+        background: linear-gradient(to left, transparent,#d62828);
+        width: 100%;
+        height: 10px;
+        position: absolute;
+        bottom: 0;
+        right: -100%;
+        // animation: name duration timing-function delay iteration-count direction fill-mode;
+        animation: left 2s linear 1s infinite;
+    }
+
+    .line-4 {
+        background: linear-gradient(to top, transparent,#d62828);
+        width: 10px;
+        height: 100%;
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        animation: top 2s linear 1.5s infinite;
+    }
+
+    h1 {
+        border-right: 2px solid rgb(255, 9, 9);
+        margin: 0;
+        width: 0;
+        color:#c89f9c;
+        overflow: hidden;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: loading 2s linear 0s infinite;
+    }
+
+    
+}

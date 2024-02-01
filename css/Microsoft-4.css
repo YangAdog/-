@@ -1,0 +1,553 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+section {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+section.big-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Navgation */
+
+.container {
+  width: 90%;
+  height: 54px;
+  min-width: 375px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 108px;
+  height: 23px;
+  margin-right: 16px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+}
+
+.menu li {
+  margin: 0 6px;
+  line-height: 48px;
+}
+
+.menu li a {
+  padding: 16px 5px 10px;
+  border: 1px dashed transparent;
+}
+
+.menu li a,
+.menu li a:hover,
+.menu li a:visited {
+  color: #262626;
+}
+
+.menu li a span {
+  padding-bottom: 2px;
+}
+
+.menu li a:hover span {
+  border-bottom: 2px solid #262626;
+}
+
+.menu li a:focus span {
+  border-bottom: 2px solid #262626;
+}
+
+.menu li a:focus {
+  border: 1px dashed #262626;
+}
+
+.menu-switch {
+  display: none;
+}
+
+.func-menu li i {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 24px;
+}
+
+.func-menu .user a i {
+  font-size: 40px;
+}
+
+.navbar.user a{
+  position: relative;
+}
+
+.navbar .func-menu li a img {
+  position: absolute;
+  top:18px;
+}
+
+.func-menu li span {
+  padding-right: 5px;
+}
+
+.func-menu .all-microsoft:hover span {
+  cursor: pointer;
+  border-bottom: 2px solid #262626;
+}
+
+/* All-microsoft-list */
+.all-microsoft-container {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  width: 1200px;
+  height: auto;
+  transform: translate(-50%);
+}
+
+.all-microsoft-list {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f2f2f2;
+}
+
+.all-microsoft-list .list-item {
+  margin: 8px 0px;
+}
+
+.all-microsoft-list .menu {
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.all-microsoft-list .menu li:first-child {
+  font-weight: bolder;
+  padding: 0 10px;
+}
+
+.all-microsoft-list .menu a {
+  padding: 16px 10px;
+}
+
+/* Header */
+/* .swiper-img {
+  position: relative;
+}
+
+.swiper-content {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  transform: translateY(-50%);
+  color: #ffffff;
+}
+
+.swiper-content .title {
+  position: relative;
+  font-size: 37px;
+  margin: 32px 0;
+}
+
+.swiper-content .title::before {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  content: "新上市";
+  font-size: 16px;
+  font-weight: bold;
+  color: #262626;
+  padding: 8px 10px;
+  background-color: #ffb900;
+}
+
+.swiper-content .content {
+  font-size: 16px;
+  margin: 32px 0;
+}
+
+.swiper-content a {
+  font-size: 16px;
+  padding: 10px 12px;
+  background-color: #0067b8;
+  color: #ffffff;
+}
+
+.swiper-content a:hover {
+  background-color: #005799;
+} */
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* Main-Choice */
+
+.main-choice {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.choice {
+  text-align: center;
+  margin: 50px 24px 0;
+}
+.choice a {
+  color: #0067b8;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Main-Choice */
+
+.main-choice {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.choice {
+  text-align: center;
+  margin: 50px 24px 0;
+}
+
+.choice a {
+  color: #0067b8;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Card-Group */
+.card-group {
+  display: flex;
+  gap: 20px;
+}
+
+.card-item {
+  width: 25%;
+}
+
+.card-item img {
+  width: 100%;
+}
+
+.card-content {
+  margin: 10px 0;
+  padding-right: 5px;
+}
+
+.card-content .title {
+  font-size: 28px;
+  margin: 15px 0;
+}
+
+.card-content .content {
+  margin-bottom: 20px;
+}
+
+.card-link-group {
+  text-align: left;
+  display: flex;
+  margin-right: 10px;
+}
+
+.card-link-group a {
+  display: inline-block;
+  color: #0067b8;
+  font-weight: bold;
+  border: 3px dotted transparent;
+}
+
+.card-link-group a:hover {
+  text-decoration: underline;
+}
+
+.card-link-group a:focus {
+  text-decoration: underline;
+  border: 3px dotted #0067b8;
+}
+
+.card-link-group i {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 26px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.card-link-group a:hover i {
+  padding-left: 5px;
+}
+
+/* Banner */
+.banner-img {
+  position: relative;
+}
+
+.banner-img img {
+  width: 100%;
+}
+
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  transform: translateY(-50%);
+  color: #ffffff;
+}
+
+.banner-content .title {
+  font-size: 37px;
+  margin: 32px 0;
+  font-weight: bold;
+}
+
+.banner-content .content {
+  font-size: 16px;
+  margin: 32px 0;
+}
+
+.banner-content a {
+  font-size: 16px;
+  padding: 10px 12px;
+  background-color: #0067b8;
+  color: #ffffff;
+}
+
+.banner-content a:hover {
+  background-color: #005799;
+}
+
+/* Social */
+.social {
+  position: relative;
+}
+
+.social-link {
+  font-size: 14px;
+  margin: 50px 0;
+}
+
+.social-info {
+  margin-bottom: 100px;
+}
+
+.social-link img {
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  margin: 0 10px;
+}
+
+.social-link span {
+  margin-left: 5px;
+}
+
+.go-top {
+  position: absolute;
+  right: 0;
+  bottom: -70%;
+  color: #000000;
+  padding: 10px 15px;
+  background-color: #cccccc;
+}
+
+.go-top:hover {
+  background-color: #ffffff;
+  box-shadow: 0 0 5px 1px #cccccc;
+}
+
+.go-top i {
+  vertical-align: middle;
+  font-size: 24px;
+}
+
+/* Footer-menu */
+
+.container-full {
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.footer-menu {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+
+.footer-menu .menu {
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.footer-menu .menu li {
+  line-height: 2.5;
+  font-size: 11px;
+  font-weight: 400;
+  color: #616161;
+}
+
+.footer-menu .menu li:first-child {
+  font-size: 16px;
+  font-weight: bolder;
+  padding: 0 5px;
+}
+
+.footer-menu .menu a,
+.footer-nav .menu a {
+  padding: 5px;
+}
+
+.footer-menu .menu li a span,
+.footer-nav .menu li a span {
+  padding-bottom: 0px;
+}
+
+.footer-menu .menu li a:hover span,
+.footer-nav .menu li a:hover span {
+  border-bottom: 1px solid #262626;
+}
+
+.footer-menu .menu li a:focus span,
+.footer-nav .menu li a:focus span {
+  border-bottom: 1px solid #262626;
+}
+
+.footer-menu .menu li a:focus,
+.footer-nav .menu li a:focus {
+  border: 1px dashed #262626;
+}
+
+/* Footer-nav */
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  padding: 15px 0;
+}
+
+.footer-nav a {
+  font-size: 11px;
+  color: #262626;
+  margin-right: 16px;
+}
+
+.footer-nav a img {
+  width: 24px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.footer-nav a:last-child img {
+  width: 28px;
+}
+
+.ccpa a {
+  padding: 5px 8px;
+  border: 1px dashed transparent;
+}
+
+.ccpa a span {
+  padding-bottom: 0px;
+}
+
+.ccpa a:hover span {
+  border-bottom: 1px solid #262626;
+}
+
+.ccpa a:focus span {
+  border-bottom: 1px solid #262626;
+}
+
+.ccpa a:focus {
+  border: 1px dashed #262626;
+}
+
+@media (max-width: 1400px) {
+
+  .search span,
+  .cart span,
+  .user span {
+    display: none;
+  }
+}
+
+@media (max-width: 1084px) {
+  .container {
+    width: 96%;
+  }
+}
+
+@media (max-width: 860px) {
+  .container {
+    position: relative;
+  }
+
+  .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu-switch {
+    display: block;
+  }
+
+  .pc-menu {
+    display: none;
+  }
+
+  .all-microsoft {
+    display: none;
+  }
+
+  .func-menu:nth-child(1) {
+    position: absolute;
+    top: 2px;
+    left: 0;
+  }
+
+  .func-menu:nth-child(2) {
+    position: absolute;
+    top: 2px;
+    right: 0;
+  }
+}
