@@ -1,0 +1,268 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.all {
+    width: 100%;
+    /*-----------------設定100%讓他跟父層(body)一樣寬------------------*/
+    height: 100vh;
+    background-color: #d6ccc2;
+    position: relative;
+    display: flex;
+}
+
+.nav {
+    height: 100%;
+    width: 366px;
+    background-color: #dddddd;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.logo {
+    height: 100px;
+    width: 100px;
+    background-image: url(./img/作業4.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.nav-btn {
+    background-color: #b8bdb5;
+    color: whitesmoke;
+    font-size: 24px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 10px;
+    display: block;
+}
+
+.container {
+    height: 100%;
+    width: calc(100% - 366px);
+    /* padding-top: calc((100vh - 570px) / 2); */
+    display: flex;
+}
+
+.content {
+    width: 1057px;
+    height: 770px;
+    margin: auto;
+    display: flex;
+}
+
+.img {
+    width: calc((100% - 10px * 2) / 3);
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.img:hover {
+    transform: scale(1.05);
+    border-radius: 10px;
+}
+
+.img-1 {
+    background-image: url(./img/作業1.png);
+}
+
+.img-2 {
+    background-image: url(./img/作業2.jpg);
+    margin: 0 10px;
+}
+
+.img-3 {
+    background-image: url(./img/作業3.jpg);
+}
+
+@media (max-width:1445px) {
+    .nav {
+        width: 280px;
+    }
+
+    .container {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content {
+        width: 650px;
+        height: 500px;
+        flex-wrap: wrap;
+    }
+
+    .img {
+        width: 100%;
+        height: 50%;
+    }
+
+    .img-1 {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .img-2 {
+        width: calc(50% - 10px);
+        margin: 0 10px 0 0;
+    }
+
+    .img-3 {
+        width: 50%;
+    }
+}
+
+@media (max-width:992px) {
+    .all {
+        flex-direction: column;
+    }
+
+    .nav {
+        height: 100px;
+        width: 100%;
+        padding: 0;
+        flex-direction: row;
+        /* justify-content: space-around; */
+    }
+
+    .logo {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 0;
+        margin-left: 10px;
+    }
+
+    .nav-btn-all {
+        display: flex;
+        width: 90%;
+        justify-content: end;
+    }
+
+    .content {
+        width: 90%;
+        height: 90%;
+    }
+}
+
+@media (max-width:500px) {
+    .nav {
+        justify-content: center;
+        position: relative;
+    }
+
+    .nav-btn-all {
+        display: none;
+        width: 120px;
+        margin: auto;
+        background-color: #5f7470;
+        opacity: 0.8;
+        position: absolute;
+        left: 10px;
+        top: 85px;
+        transition: 1s;
+        z-index: 1;
+    }
+
+    .logo {
+        margin-left: 0;
+    }
+
+    .nav-btn {
+        width: 100px;
+        color: #01161e;
+        font-size: 20px;
+        font-style: oblique;
+        margin-bottom: 10px;
+        display: inline-block;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .content {
+        width: 100%;
+        height: 100%;
+    }
+
+    .img {
+        width: 100%;
+        height: calc(100% / 3);
+        margin: 0;
+    }
+
+    .img:hover {
+        transform: scale(0.95);
+    }
+
+    .ham-menu {
+        width: 80px;
+        height: 80px;
+        background-color: #889696;
+        /* 原來是行內層級 改為區塊層級 */
+        display: block;
+        position: relative;
+        position: absolute;
+        left: 2px;
+        top: 2px;
+    }
+
+    .ham-menu .line {
+        background-color: #eff6e0;
+        width: 80%;
+        height: 5px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: 0.5s;
+    }
+
+    .ham-menu .line-1 {
+        top: 25%;
+    }
+
+    .ham-menu .line-2 {
+        top: 50%;
+    }
+
+    .ham-menu .line-3 {
+        top: 75%;
+    }
+
+    #ham-menu-switch:checked+.ham-menu .line-2 {
+        display: none;
+    }
+
+    #ham-menu-switch:checked+.ham-menu .line-1 {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    #ham-menu-switch:checked+.ham-menu .line-3 {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    #ham-menu-switch:checked~.nav-btn-all {
+        display: block;
+        /* transition: 1s; */
+
+    }
+
+
+
+
+}

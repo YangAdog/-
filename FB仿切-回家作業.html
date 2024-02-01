@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #nav-1 {
+            background-color: whitesmoke;
+            width: 100%;
+            height: 50px;
+            position: fixed;
+            z-index: 9;
+            position: relative;
+        }
+
+        /* #container {
+            width: 80%;
+            height: 3000px;
+            margin: auto;
+            padding-top: 50px;
+        } */
+
+        #logo {
+            background-image: url(./img/svg/FB.svg);
+            width: 30px;
+            height: 30px;
+            left: 5px;
+            top: calc((50px - 30px)/2);
+            position: absolute;
+            background-size: cover;
+            /* background-position: center; */
+        }
+
+        #search {
+            width: 200px;
+            height: 30px;
+            top: calc((50px - 30px)/2);
+            position: absolute;
+            left: 50px;
+            background-color: rgb(207, 204, 200);
+            border-radius: 90px;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        #search img {
+            position: absolute;
+            left: 4px;
+            width: 30px;
+            height: 20px;
+            top: calc((50px - 30px)/2);
+        }
+
+        #house,
+        #video,
+        #marketplace,
+        #group,
+        #game {
+            width: 30px;
+            height: 30px;
+            background-position: top;
+            position: absolute;
+            background-size: cover;
+            /* position: fixed; */
+            top: calc((50px - 30px)/2);
+
+        }
+
+        #house {
+            background-image: url(./img/svg/房子.svg);
+            left: 25%;
+        }
+
+        #video {
+            background-image: url(./img/svg/video.svg);
+            left: 35%;
+        }
+
+        #marketplace {
+            background-image: url(./img/svg/marketplace.svg);
+            left: 45%;
+        }
+
+        #group {
+            background-image: url(./img/svg/group.svg);
+            left: 55%;
+        }
+
+        #game {
+            background-image: url(./img/svg/game.svg);
+            left: 65%;
+        }
+
+        #button,
+        #messenger,
+        #notice,
+        #photo {
+            width: 30px;
+            height: 30px;
+            top: calc((50px - 30px)/2);
+            position: absolute;
+            background-size: 20px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #b7b7a4;
+            border-radius: 50%;
+            /* background-position: top; */
+        }
+
+        #button {
+            background-image: url(./img/svg/九宮格.svg);
+            right: 10%;
+        }
+
+        #messenger {
+            background-image: url(./img/svg/messenger.svg);
+            right: 7%;
+        }
+
+        #notice {
+            background-image: url(./img/svg/notice.svg);
+            right: 4%;
+        }
+
+        #photo {
+            background-image: url(./img/大頭照.png);
+            right: 1%;
+            background-size: cover;
+        }
+
+        #nav-2 {
+            width: 100%;
+            height: 500px;
+        }
+
+        #cover {
+            width: 80%;
+            height: 450px;
+            background-image: url(./img/FB封面.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 20px;
+            margin: auto;
+            background-position: center;
+            position: relative;
+        }
+
+        #photo-2 {
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            border-radius: 50%;
+            background-image: url(./img/大頭照.png);
+            background-size: 100%;
+            top: 450px;
+            left: 200px;
+        }
+
+        #button-1,
+        #button-2 {
+            background-color: #001219;
+            opacity: 0.7;
+            width: 170px;
+            height: 25px;
+            text-align: center;
+            line-height: 25px;
+            position: absolute;
+            right: 200px;
+            top: 420px;
+            color: whitesmoke;
+            border-radius: 5px;
+        }
+
+        #button-2 {
+            top: 450px;
+        }
+
+        #b-2-img {
+            background-image: url(./img/images.jpg);
+            background-size: cover;
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            right: 140px;
+            bottom: -1px;
+            /* background-color: black; */
+        }
+
+        #nav-3 {
+            /* background-color: aqua; */
+            position: relative;
+            left: 25%;
+            width: 60%;
+            height: 150px;
+            top: -20px;
+        }
+
+        #name {
+            color: black;
+            font-size: 36px;
+            position: absolute;
+            font-weight: 900;
+            float: left;
+        }
+
+        #friend {
+            color: black;
+            position: absolute;
+            font-size: 24px;
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            top: 50px;
+            float: left;
+        }
+
+        #button-3 {
+            height: 35px;
+            width: 45px;
+            background-color: #E4E6EB;
+            float: right;
+            /* margin: 11px 5px; */
+            position:relative;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+
+        #b-3-img {
+            background-image: url(./img/svg/下箭頭2.svg);
+            width: 30px;
+            height: 30px;
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            margin: 5px 6px;
+        }
+
+        #file {
+            width: 136px;
+            height: 36px;
+            margin: 10px 8px 0 8px;
+            background-color: #E4E6EB;
+            border-radius: 6px;
+            float: right;
+            color: #000000;
+            text-align: center;
+            line-height: 36px;
+        }
+
+        #dynamic {
+            width: 155px;
+            height: 36px;
+            margin: 10px 0 0 10px;
+            background-color: #0866FF;
+            border-radius: 6px;
+            float: right;
+            color: #FFFFFF;
+            text-align: center;
+            line-height: 36px;
+            position: relative;
+        }
+
+        #d-img {
+            background-image: url(./img/svg/+.svg);
+            background-size: 20px;
+            background-size: cover;
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            bottom: 10px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="nav-1">
+        <div id="logo"></div>
+        <div id="search">搜尋Facebook
+            <img src="./img/svg/search.svg" alt="">
+        </div>
+        <div id="house"></div>
+        <div id="video"></div>
+        <div id="marketplace"></div>
+        <div id="group"></div>
+        <div id="game"></div>
+        <div id="messenger"></div>
+        <div id="button"></div>
+        <div id="notice"></div>
+        <div id="photo"></div>
+    </div>
+    <div id="nav-2">
+        <div id="cover"></div>
+        <div id="photo-2"></div>
+        <div id="button-1">使用虛擬替身建立</div>
+        <div id="button-2">編輯封面相片
+            <div id="b-2-img"></div>
+        </div>
+    </div>
+    <div id="nav-3">
+        <div id="name">壹貳參</div>
+        <div id="friend">0位好友</div>
+        <div id="button-3">
+            <div id="b-3-img"></div>
+        </div>
+        <div id="file">編輯個人檔案</div>
+        <div id="dynamic"> 新增到限時動態
+            <div id="d-img"></div>
+        </div>
+</body>
+
+</html>

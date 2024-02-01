@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        .banner {
+            position: relative;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+            opacity: 0.75;
+        }
+
+        .banner-1 {
+            height: 100vh;
+            background-image: url(img_parallax.jpg);
+        }
+
+        .banner-2 {
+            height: 500px;
+            background-image: url(img_parallax2.jpg);
+        }
+
+        .banner-3 {
+            height: 500px;
+            background-image: url(img_parallax3.jpg);
+        }
+        .banner-4 {
+            height: 100vh;
+            background-image: url(img_parallax.jpg);
+        }
+        .mask {
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            opacity: 0.3;
+        }
+
+        .btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -30%);
+            padding: 18px 24px;
+            background-color: #333333;
+            color: #FFFFFF;
+            font-size: 25px;
+            letter-spacing: 8px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .banner-content,
+        .content {
+            width: calc(100% - 160px);
+            padding: 50px 80px;
+        }
+
+        .banner-title {
+            text-align: center;
+            margin:20px 0 ;
+            font-size: 20px;
+            color: #000000;
+            letter-spacing: 8px;
+
+        }
+
+        .banner-text {
+            text-align: justify;
+            font-size: 15px;
+            color: #000000;
+            line-height: 1.5;
+            /* letter-spacing: 8px; */
+        }
+
+        .content {
+            background-color: #282E34;
+        }
+
+        .title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #111111;
+            font-size: 25px;
+            letter-spacing: 16px;
+            text-align: center;
+        }
+
+        .text {
+            margin: 15px 0;
+            font-size: 15px;
+            color: #DDDDDD;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div class="banner banner-1">
+            <div class="mask"></div>
+            <div class="btn">SCROLL DOWN</div>
+        </div>
+        <div class="banner-content">
+            <div class="banner-title">PARALLAX DEMO</div>
+            <div class="banner-text">Parallax scrolling is a web site trend where the background content is moved at a
+                different
+                speed than the foreground content while scrolling. Nascetur per nec posuere turpis, lectus nec libero
+                turpis nunc at, sed posuere mollis ullamcorper libero ante lectus, blandit pellentesque a, magna turpis
+                est sapien duis blandit dignissim. Viverra interdum mi magna mi, morbi sociis. Condimentum dui ipsum
+                consequat morbi, curabitur aliquam pede, nullam vitae eu placerat eget et vehicula. Varius quisque non
+                molestie dolor, nunc nisl dapibus vestibulum at, sodales tincidunt mauris ullamcorper, dapibus pulvinar,
+                in in neque risus odio. Accumsan fringilla vulputate at quibusdam sociis eleifend, aenean maecenas
+                vulputate, non id vehicula lorem mattis, ratione interdum sociis ornare. Suscipit proin magna cras vel,
+                non sit platea sit, maecenas ante augue etiam maecenas, porta porttitor placerat leo.</div>
+        </div>
+        <div class="banner banner-2">
+            <div class="mask"></div>
+            <div class="title">LESS HEIGHT</div>
+        </div>
+        <div class="content">
+            <div class="text">Scroll up and down to really get the feeling of how Parallax Scrolling works.</div>
+        </div>
+        <div class="banner banner-3">
+            <div class="mask"></div>
+            <div class="title">SCROLL UP</div>
+        </div>
+        <div class="content">
+            <div class="text">Scroll up and down to really get the feeling of how Parallax Scrolling works.</div>
+        </div>
+        <div class="banner banner-4">
+            <div class="mask"></div>
+            <div class="btn">COOL!</div>
+        </div>
+    </div>
+</body>
+
+</html>

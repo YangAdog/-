@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        #all {
+            width: calc(80% - 10px * 2);
+            height: calc(600px - 10px * 2);
+            background-color:#fefae0;
+            margin: auto;
+            padding: 10px;
+        }
+
+        #header {
+            width: 100%;
+            height:calc(20% - 10px);
+            background-color: yellow;
+            margin-bottom: 10px;
+        }
+
+        #mainL {
+            width:calc(34% - 10px);
+            height:calc(60% - 10px);
+            background-color: #219ebc;
+            float: left;
+            margin-right:10px ;
+            margin-bottom: 10px;
+        }
+
+        #mainR {
+            width: 66%;
+            height:calc(60% - 10px);
+            /* background-color: black; */
+            float: right;
+        }
+
+        #mainR-top {
+            width:100%;
+            height:calc(34% - 10px);
+            background-color: #457b9d;
+            margin-bottom: 10px;
+        }
+
+        #mainR-middle {
+            width: 100%;
+            height:calc(32% - 10px);
+            background-color: palevioletred;
+            margin-bottom: 10px;
+        }
+
+        #mainR-bottom {
+            width: 100%;
+            height: 34%;
+            background-color: #ccff33;
+        }
+
+        #footer {
+            width: 100%;
+            height: 20%;
+            background-color: #588157;
+            clear:both;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="all">
+        <div id="header"></div>
+        <div id="mainL"></div>
+        <div id="mainR">
+            <div id="mainR-top"></div>
+            <div id="mainR-middle"></div>
+            <div id="mainR-bottom"></div>
+        </div>
+        <div id="footer"></div>
+    </div>
+
+</body>
+
+</html>
