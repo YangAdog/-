@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <img src="./img/meme.jpg" alt="">
+
+    <script>
+        let img = document.querySelector('img');
+
+        let flag = 2;
+
+        img.addEventListener('click', function () {
+            //換成另一張圖片
+
+            if (flag == 2) {
+                img.src = './img/doge-s.jpg';
+                flag = 3;
+            } else if (flag == 3) {
+                img.src = './img/img.jpg';
+                flag = 1;
+            } else {
+                img.src = './img/meme.jpg';
+                flag = 2;
+            };
+        });
+
+    </script>
+</body>
+
+</html>

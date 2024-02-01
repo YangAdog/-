@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn {
+            width: 60px;
+            height: 30px;
+            background-color: rgb(168, 178, 187);
+            border-radius: 20%;
+            font-size: 12px;
+            color: #f2e9e4;
+        }
+
+        .A {
+            width: 70px;
+            height: 20px;
+            background-color:#edede9;
+            border-radius: 10%;
+        }
+        .B {
+            width: 70px;
+            height: 20px;
+            background-color:#edede9;
+            border-radius: 10%;
+        }
+        .output {
+            width: 70px;
+            height: 20px;
+            background-color:#edede9;
+            border-radius: 10%;
+        }
+    </style>
+</head>
+
+<body>
+    <label>
+        輸入數字: <input class="z" type="number" value="">
+    </label>
+    <br>
+    <button class="a" type="button">+</button>
+    <button class="b" type="button">-</button>
+    <button class="c" type="button">x</button>
+    <button class="d" type="button">/</button>
+    <br>
+    <label>
+        輸入數字: <input class="x" type="number" value="">
+    </label>
+    <hr>
+    <div class="output">答案在這</div>
+
+    <script>
+        let z = document.querySelector('.z');
+        let x = document.querySelector('.x');
+        let a = document.querySelector('.a');
+        let b = document.querySelector(".b");
+        let c = document.querySelector(".c");
+        let d = document.querySelector(".d");
+        let output = document.querySelector('.output');
+
+        // 相加
+        a.addEventListener('click', function () {
+            //抓整數的值，將字串轉為整數
+            let num1 = parseInt(z.value);
+            let num2 = parseInt(x.value);
+            //檢查類型是字串或數字，typeof 類型
+            console.log(typeof (num1, num2));
+            //相加
+            add(num1, num2);
+        });
+
+        function add(num1, num2) {
+            output.textContent = num1 + num2;
+        };
+
+        // 相減
+        b.addEventListener('click', function () {
+            let num1 = parseInt(z.value);
+            let num2 = parseInt(x.value);
+            console.log(typeof (num1, num2));
+            minus(num1, num2);
+        });
+
+        function minus(num1,num2) {
+            output.textContent = num1 - num2;
+        };
+
+        // 相乘
+        c.addEventListener('click', function () {
+            let num1 = parseInt(z.value);
+            let num2 = parseInt(x.value);
+            console.log(typeof (num1, num2));
+            mul(num1, num2);
+        });
+
+        function mul(num1,num2) {
+            output.textContent = num1 * num2;
+        };
+
+        // 相除
+        d.addEventListener('click', function () {
+            let num1 = parseInt(z.value);
+            let num2 = parseInt(x.value);
+            console.log(typeof (num1, num2));
+            divi(num1, num2);
+        });
+
+        function divi(num1,num2) {
+            output.textContent = num1 / num2;
+        };
+
+    </script>
+
+</body>
+
+</html>

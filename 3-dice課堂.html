@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.diceSelect {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    text-align: center;
+    gap: 5px;
+}
+
+form, table {
+    width: 400px;
+    color: #354f52;
+    margin-top: 20px;
+}
+
+table {
+    width: 400px;
+    border: 1px solid black;
+}
+
+    </style>
+</head>
+
+<body>
+    <form>
+        ⚀ ⚁ ⚂ ⚃ ⚄ ⚅
+        <br>
+        <label>
+            第一顆骰子：
+            <select class="">
+                <option value="1">⚀</option>
+                <option value="2">⚁</option>
+                <option value="3">⚂</option>
+                <option value="4">⚃</option>
+                <option value="5">⚄</option>
+                <option value="6">⚅</option>
+            </select>
+        </label>
+        <br>
+        <label>
+            第二顆骰子：
+            <select class="">
+                <option value="1">⚀</option>
+                <option value="2">⚁</option>
+                <option value="3">⚂</option>
+                <option value="4">⚃</option>
+                <option value="5">⚄</option>
+                <option value="6">⚅</option>
+            </select>
+        </label>
+        <br>
+        <label>
+            第三顆骰子：
+            <select class="">
+                <option value="1">⚀</option>
+                <option value="2">⚁</option>
+                <option value="3">⚂</option>
+                <option value="4">⚃</option>
+                <option value="5">⚄</option>
+                <option value="6">⚅</option>
+            </select>
+        </label>
+        <br>
+        <div class="seq">
+            注重順序：
+            <input id="yes" type="radio" name="seq1">
+            <label for="yes">要</label>
+            <input id="no" type="radio" name="seq1">
+            <label for="no">不要</label>
+        </div>
+        <br>
+        <button type="button" class="start">開始模擬</button>
+    </form>
+    <a href="#">看結果</a>
+    <br>
+    <table>
+        <thead>
+            <tr>
+                <th>次數</th>
+                <th>結果</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <a href="#">回頂部</a>
+
+
+    <script>
+        // 先宣告
+        let selects = document.querySelectorAll('select');
+        let start = document.querySelector('.start');
+        let tbody = document.querySelector('tbody');
+
+        // 按下開始後執行
+        start.addEventListener('click', function () {
+            tbody.innerHTML = ''; // 先清空表格
+            let round = 0; // 一開始的回合數
+            let times = 0; // 比對次數
+
+            while (true) {
+                // let result = ''; // 骰子的結果
+                let diceIcon = ''; // 骰子符號
+
+                for (let i = 0; i < selects.length; i++) {
+                    let dice = getRandom(6, 1);
+                    // result += dice;
+
+                    if (dice == selects[i].value) {
+                        times++;
+                    } else {
+                        times = 0;
+                    };
+
+                    if (dice == 1) {
+                        diceIcon += `⚀`;
+                    } else if (dice == 2) {
+                        diceIcon += `⚁`;
+                    } else if (dice == 3) {
+                        diceIcon += `⚂`;
+                    } else if (dice == 4) {
+                        diceIcon += `⚃`;
+                    } else if (dice == 5) {
+                        diceIcon += `⚄`;
+                    } else {
+                        diceIcon += `⚅`;
+                    };
+                };
+
+                round++;
+                tbody.innerHTML +=
+                                `<tr>
+                                    <td>第${round}回合</td>
+                                    <td>${diceIcon}</td>
+                                </tr>`;
+
+                if (times == 3) {
+                    break;
+                };
+
+
+
+
+                /*
+                let dice1 = randomNumber(6, 1);
+                let dice2 = randomNumber(6, 1);
+                let dice3 = randomNumber(6, 1);
+
+                // 比第1顆
+                if (dice1 == selects[0].value) {
+                    // 比第2顆
+                    if (dice2 == selects[1].value) {
+                        // 比第3顆
+                        if (dice3 == selects[2].value) {
+                            round++;
+                            tbody.innerHTML +=
+                                `<tr>
+                                    <td>${round}</td>
+                                    <td>${dice1}${dice2}${dice3}</td>
+                                </tr>`;
+                            break;
+                        } else {
+                            round++;
+                            tbody.innerHTML +=
+                                `<tr>
+                                    <td>${round}</td>
+                                    <td>${dice1}${dice2}${dice3}</td>
+                                </tr>`;
+                        }
+                    } else {
+                        round++;
+                        tbody.innerHTML +=
+                            `<tr>
+                                <td>${round}</td>
+                                <td>${dice1}${dice2}${dice3}</td>
+                            </tr>`;
+                    }
+                } else {
+                    round++;
+                    tbody.innerHTML +=
+                        `<tr>
+                            <td>${round}</td>
+                            <td>${dice1}${dice2}${dice3}</td>
+                        </tr>`;
+                } */
+            }
+        });
+
+        function getRandom(max, min) {
+            return Math.floor(Math.random() * max + min);
+        };
+
+    </script>
+</body>
+
+</html>

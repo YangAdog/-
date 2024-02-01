@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI表格</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: auto;
+            margin-bottom: 50px;
+        }
+
+        th,
+        td {
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 8px;
+
+        }
+
+        .Ans {
+            background-color: #ccd5ae;
+            width: 100px;
+            height: 30px;
+            margin: auto;
+        }
+
+        h2 {
+            background-color: #b0c4b1;
+            width: 15%;
+            height: 40px;
+            margin-left: 150px;
+            text-align: center;
+        }
+        /* .BMI {
+
+        } */
+    </style>
+</head>
+
+<body>
+
+    <h2>BMI表格</h2>
+
+    <table id="bmiTable">
+        <thead>
+            <tr>
+                <th>身高（cm）</th>
+                <th>體重（kg）</th>
+                <th>BMI</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="number" class="height1" value=""></td>
+                <td><input type="number" class="weight1" value=""></td>
+                <td><button class="calc">計算</button></td>
+
+            </tr>
+            <tr>
+                <td>BMI為<div class="Ans"></div></td>
+                <td class="BMI"></td>
+                <td><button class="clearBtn" type="button">清除</button></td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </tbody>
+
+    </table>
+
+    <h2>BMI範圍</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>
+                    身體質量指數(BMI)(kg/m2)
+                </th>
+                <th>
+                    腰圍(cm)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    體重過輕
+                </td>
+                <td>
+                    BMI ＜ 18.5
+                </td>
+                <td>
+                    -
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    正常範圍
+                </td>
+                <td>
+                    18.5≦BMI＜24
+                </td>
+                <td>
+                    -
+                </td>
+            </tr>
+            <tr>
+                <td>異常範圍</td>
+                <td>
+                    <div>過重：24≦BMI＜27</div>
+                    <div>輕度肥胖：27≦BMI＜30</div>
+                    <div>中度肥胖：30≦BMI＜35</div>
+                    <div>重度肥胖：BMI≧35</div>
+                </td>
+                <td>
+                    <div>男性：≧90公分</div>
+                    <div>女性：≧80公分</div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        let height = document.querySelector('.height1');
+        let weight = document.querySelector('.weight1');
+        let Ans = document.querySelector('.Ans');
+        let calc = document.querySelector('.calc');
+        let clearBtn = document.querySelector('.clearBtn');
+
+
+        calc.addEventListener('click', function () {
+            let H = Number(height.value) / 100;
+            let W = Number(weight.value);
+            let BMI = document.querySelector('.BMI');
+            Ans.textContent = (W / (H * H)).toFixed(2);
+            let bones = (W / (H * H)).toFixed(2);
+
+            if (bones < 18.5) {
+                BMI.textContent ='他媽沒吃飯R';
+            } else if(bones < 24 ){
+                BMI.textContent ='營養剛好ㄛ';
+            } else {
+                BMI.textContent ='吃太多了8!';
+            };
+
+        });
+
+        clearBtn.addEventListener('click', function () {
+            Ans.innerHTML = '';
+            height.value = '';
+            weight.value = '';
+        });
+
+
+    </script>
+
+</body>
+
+</html>
