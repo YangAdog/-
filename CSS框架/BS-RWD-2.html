@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+
+    <style>
+        .nav {
+            width: 366px;
+        }
+
+        @media (max-width: 1200px) {
+            .nav {
+                width: 100%;
+                height: 100px;
+            }
+        }
+
+        .my-content {
+            width: 960px;
+            height: 570px;
+        }
+
+        @media (max-width:1400px) {
+            .my-content {
+                width: 800px;
+                height: 570px;
+            }
+        }
+
+        @media (max-width:1200px) {
+            .my-content {
+                width: 80%;
+                height: 100%;
+                padding: 50px 0;
+            }
+        }
+
+        @media (max-width:576px) {
+            .my-content {
+                width: 100%;
+                padding: 0;
+            }
+        }
+
+
+        .my-img {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top;
+        }
+
+        @media (min-width:1400px) {
+            .h-xxl-100 {
+                height: 100% !important;
+            }
+        }
+
+        @media (max-width:576px) {
+            .my-h-100 {
+                height: 100%;
+            }
+
+            .h-f-1-3 {
+                height: calc(100%/3) !important;
+            }
+        }
+
+        @media (max-width:992px) {
+            .my-logo {
+                position: absolute;
+                left: 50%;
+                top: 0px;
+                transform: translateX(-50%);
+            }
+            .pesudo {
+                visibility: hidden;
+                height:90px;
+            }
+           
+        }
+        .nav-item{
+            border: 1px solid whitesmoke;
+            margin-bottom: 5px;
+            margin-left: 10px;       
+        }
+       
+    </style>
+</head>
+
+<body>
+    <!-- 放所有的東西 -->
+    <div class="my-all w-100 vh-100 d-flex flex-column flex-xl-row bg-gradient">
+        <!-- menu -->
+        <!-- <div class="nav flex-shrink-0 bg-success-subtle"></div> -->
+
+        <nav class=" nav navbar navbar-expand-lg bg-dark-subtle ">
+            <div class="container-fluid position-relative flex-xl-column">
+                <a class="navbar-brand my-logo m-md-4 m-xl-auto my-xl-5" href="#">
+                    <img src="./img/logo-2.jpg" alt="Bootstrap" width="80" height="80">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="pesudo"></div>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01" >
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 flex-xl-column text-center ">
+                        <li class="nav-item btn btn-outline btn-sm ">
+                            <a class="nav-link text-white" aria-current="page" href="#">Google</a>
+                        </li>
+                        <li class="nav-item btn btn-outline btn-sm ">
+                            <a class="nav-link active text-white " aria-current="page" href="#">Twitter</a>
+                        </li>
+                        <li class="nav-item btn btn-outline  btn-sm ">
+                            <a class="nav-link text-white" href="#">Instagram</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- 內容 -->
+        <div class="my-container flex-grow-1 h-100 d-flex justify-content-center align-items-center my-h-100 bg-dark">
+            <div class="my-content d-flex  flex-wrap  my-h-100">
+                <div class="col-12 col-sm-12 col-xxl-4 my-img rounded h-f-1-3 h-50 h-xxl-100"
+                    style="background-image: url(./img/3-2.jpg);"></div>
+                <div class="col-12 col-sm-6 col-xxl-4 my-img rounded h-f-1-3 h-50 h-xxl-100"
+                    style="background-image: url(./img/B-2.jpg);"></div>
+                <div class="col-12 col-sm-6 col-xxl-4 my-img rounded h-f-1-3 h-50 h-xxl-100"
+                    style="background-image: url(./img/f-2.jpg);"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
